@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarHub</title>
+</head>
+<body>
+    <h3>CREATE A NEW LISTING</h3>
+    <form method="POST" action="/listings">
+       <input name="Listing[title]" placeholder="Enter title" type="text">
+       <br> <br>
+       <textarea name="Listing[description]" placeholder="Enter description"></textarea>
+       <br>
+       <br>
+       <input name="Listing[image]" placeholder="Enter image/url" type="text"/>
+       <br>
+       <br>
+       <input name="Listing[price]" placeholder="Enter price" type="number"/>
+       <br>
+       <br>
+       <input name="Listing[location]" placeholder="Enter location" type="text"/>
+       <br> <br>
+       <input name="listing[country]" placeholder="Enter country" type="text"/>
+       <br> <br>
+       <button>ADD</button>
+    </form>
+</body>
+</html>
