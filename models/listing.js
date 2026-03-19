@@ -7,10 +7,12 @@ const listingSchema= new Schema({
    },
    description:String,
    image:{
+    filename:String,
+    url:{
     type:String,
     default:"https://thumbs.dreamstime.com/b/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available-236105299.jpg",
     set: (v)=> v === "" ? "https://thumbs.dreamstime.com/b/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available-236105299.jpg" : v,
-   },
+   }},
    price: Number,
    location: String,
    country: String,
