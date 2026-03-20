@@ -34,7 +34,7 @@ app.get("/listings/new",(req,res)=>{
 });
 //get post request from form
 app.post("/listings",async(req,res)=>{
-     const newlisting=new Listing(req.body.Listing);
+     const newlisting=new Listing(req.body.listing);
      await newlisting.save();
      res.redirect("/listings");
 
@@ -55,7 +55,7 @@ app.get("/listings/:id",async (req,res)=>{
 //edit data
 app.put("/listings/:id" ,async (req,res)=>{
     let {id}=req.params;
-    await Listing.findByIdAndUpdate(id, {...req.body.Listing});
+    await Listing.findByIdAndUpdate(id, {...req.body.listing});
     res.redirect(`/listings/${id}`);
 });
 app.delete("/listings/:id", async(req,res)=>{
