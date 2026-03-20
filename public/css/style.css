@@ -22,3 +22,115 @@
     padding: 0.8rem 1.5rem;
     height: 5rem;
 }
+footer {
+    background-color: #F9FAFB;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.f-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: center;
+    color: #132440;
+    font-size: 0.9rem;
+}
+
+/* Social icons */
+.f-info-socials i {
+    margin: 0 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.f-info-socials i:hover {
+    color: #3B82F6;
+    transform: translateY(-2px);
+}
+
+/* Links */
+.f-info-links a {
+    text-decoration: none;
+    color: #132440;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.f-info-links a:hover {
+    color: #3B82F6;
+    text-decoration: underline;
+}
+/* Heading */
+.listing-heading {
+    color: #132440;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+/* Card styling */
+.listing-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Hover effect */
+.listing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Title */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #132440;
+}
+
+/* Price */
+.card-price {
+    color: #16476A;
+    font-weight: 500;
+}
+
+/* Card body spacing */
+.card-body {
+    padding: 1rem;
+}
+
+/* Add subtle accent line */
+.listing-card::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: #3B9797;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.listing-card:hover::after {
+    width: 100%;
+}
+.card-img-top {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.listing-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

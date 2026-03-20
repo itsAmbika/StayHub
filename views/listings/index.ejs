@@ -1,12 +1,32 @@
-<% layout("/layouts/boilerplate")%>
-<body>
-    <h3>Listing</h3>
-    
-    <ul>
-    <% for(let listing of allListings){ %>
-         <li><a href="/listings/<%=listing._id%>"><%=listing.title%></a></li>
-         <li><a href="/listings/<%=listing._id%>"><%=listing.title%></a></li>
-    <%} %>
-</ul>
-</body>
+<% layout("/layouts/boilerplate") %>
+<div class="row g-4">
+  <% for(let listing of allListings){ %>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+
+        <div class="card listing-card h-100">
+
+          <img 
+            src="<%= listing.image.url || 'https://via.placeholder.com/400' %>" 
+            class="card-img-top"
+            alt="listing_image"
+          >
+
+          <div class="card-body">
+            <p class="card-title"><%= listing.title %></p>
+            <p class="card-price">
+              ₹ <%= listing.price.toLocaleString("en-IN") %> / night
+            </p>
+          </div>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  <% } %>
+</div>
 
