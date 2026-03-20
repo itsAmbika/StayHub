@@ -1,0 +1,24 @@
+
+.bg-custom {
+    background-color: #FDB5CE !important;
+}
+/* Text color */
+.bg-custom .navbar-brand,
+.bg-custom .nav-link {
+    color: #132440 !important;
+}
+
+/* Hover effect */
+.bg-custom .nav-link:hover {
+    color: #000000 !important;
+}
+
+/* Active link styling */
+.bg-custom .nav-link.active {
+    font-weight: 600;
+    border-bottom: 2px solid #132440;
+}
+.navbar {
+    padding: 0.8rem 1.5rem;
+    height: 5rem;
+}
