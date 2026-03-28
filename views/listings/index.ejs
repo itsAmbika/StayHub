@@ -9,7 +9,7 @@
         <div class="card listing-card h-100">
 
           <img 
-            src="<%= listing.image.url %>" 
+            src="<%= listing.image && listing.image.url ? listing.image.url : 'https://thumbs.dreamstime.com/b/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available-236105299.jpg' %>" 
             class="card-img-top"
             alt="listing_image"
           >
