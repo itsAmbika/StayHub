@@ -1,34 +1,48 @@
 <% layout("/layouts/boilerplate")%>
-<body>
 
 <div class="form-container">
 
   <h3 class="form-heading">Create New Listing</h3>
 
-  <form method="POST" action="/listings">
+  <form method="POST" action="/listings" novalidate class="needs-validation">
 
     <div class="form-group">
-      <input name="listing[title]" placeholder="Enter title" type="text" required>
+      <input name="listing[title]" placeholder="Enter title" type="text" class="form-control" required>
+      <div class="invalid-feedback">
+        Please provide a title.
+      </div>
     </div>
 
     <div class="form-group">
-      <textarea name="listing[description]" placeholder="Enter description" required></textarea>
+      <textarea name="listing[description]" placeholder="Enter description" class="form-control" required></textarea>
+      <div class="invalid-feedback">
+        Please provide a description.
+      </div>
     </div>
 
     <div class="form-group">
-      <input name="listing[image]" placeholder="Enter image URL" type="text">
+      <input name="listing[image]" placeholder="Enter image URL" type="text" class="form-control">
     </div>
 
     <div class="form-group">
-      <input name="listing[price]" placeholder="Enter price" type="number" required>
+      <input name="listing[price]" placeholder="Enter price" type="number" class="form-control" required>
+      <div class="invalid-feedback">
+        Please provide a valid price.
+      </div>
     </div>
 
     <div class="form-group">
-      <input name="listing[location]" placeholder="Enter location" type="text" required>
+      <input name="listing[location]" placeholder="Enter location" type="text" class="form-control" required>
+      <div class="invalid-feedback">
+        Please provide a location.
+      </div>
     </div>
 
     <div class="form-group">
-      <input name="listing[country]" placeholder="Enter country" type="text" required>
+      <input name="listing[country]" placeholder="Enter country" type="text" class="form-control" required>
+      <div class="invalid-feedback">
+        Please provide a country.
+      </div>
     </div>
 
     <button class="btn-submit">Add Listing</button>
@@ -36,5 +50,3 @@
   </form>
 
 </div>
-
-</body>
