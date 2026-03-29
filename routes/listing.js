@@ -1,7 +1,7 @@
 const express= require("express");
 const router=express.Router();
 const wrapAsync=require("../utils/wrapAsync.js");
-const { listingSchema, reviewSchema } = require("../schema.js");
+const { listingSchema } = require("../schema.js");
 const ExpressError=require("../utils/ExpressError.js");
 const Listing= require("../models/listing.js");
 
@@ -33,12 +33,18 @@ router.post("/",validateListing,wrapAsync(async(req,res,next)=>{
 router.get("/:id/edit",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     const listing=await Listing.findById(id);
+    if (!listing) {
+        throw new ExpressError(404, "Listing not found");
+    }
     res.render("listings/edit", {listing});
 }));
 //show route 
 router.get("/:id",wrapAsync(async (req,res)=>{
    let {id}=req.params;
    const listing=await Listing.findById(id).populate("reviews");
+   if (!listing) {
+       throw new ExpressError(404, "Listing not found");
+   }
    res.render("listings/show",{listing});
 
 }));
