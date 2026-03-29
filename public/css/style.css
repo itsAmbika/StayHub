@@ -384,3 +384,214 @@ textarea {
 .btn-delete:hover {
     background-color: #16476A;
 }
+
+
+
+
+
+
+/* ---------- GLOBAL ---------- */
+body {
+    background-color: #FDF7F9;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- DETAILS CARD ---------- */
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.details-card {
+    max-width: 720px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.details-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.details-body {
+    padding: 1.5rem;
+}
+
+.details-title {
+    color: #132440;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.details-price {
+    color: #16476A;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.details-desc {
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.details-location {
+    color: #3B9797;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.details-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-edit {
+    padding: 0.6rem 1.2rem;
+    background-color: #FDB5CE;
+    color: #132440;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: #3B9797;
+    color: white;
+}
+
+.btn-delete {
+    padding: 0.6rem 1.2rem;
+    background-color: #132440;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #16476A;
+}
+
+/* ---------- REVIEW FORM ---------- */
+
+.review-container {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.review-heading {
+    color: #132440;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.review-group {
+    margin-bottom: 1.2rem;
+}
+
+.review-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #16476A;
+    font-weight: 500;
+}
+
+/* Textarea */
+.review-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    resize: none;
+    transition: 0.3s;
+}
+
+.review-group textarea:focus {
+    outline: none;
+    border-color: #3B9797;
+    box-shadow: 0 0 0 2px rgba(59,151,151,0.2);
+}
+
+/* Range */
+.form-range {
+    width: 100%;
+    accent-color: #3B9797;
+}
+
+/* Button */
+.btn-review {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #FDB5CE;
+    color: #132440;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-review:hover {
+    background-color: #3B9797;
+    color: white;
+}
+
+/* ---------- REVIEWS LIST ---------- */
+
+.reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Review card */
+.review-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Name */
+.review-card .card-title {
+    font-weight: 600;
+    color: #132440;
+    margin-bottom: 0.4rem;
+}
+
+/* Stars */
+.review-rating {
+    color: #3B9797;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Comment */
+.review-text {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* No reviews */
+.no-reviews {
+    color: #888;
+    font-style: italic;
+}

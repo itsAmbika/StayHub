@@ -45,11 +45,11 @@
 
   <h4 class="review-heading">Leave a Review</h4>
 
-  <form class="review-form" action="/listings/<%= listing._id %>/reviews" method="POST">
+  <form class="review-form" action="/listings/<%= listing._id %>/reviews" method="POST" >
 
     <div class="review-group">
       <label for="rating">Rating</label>
-      <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range">
+      <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range" required>
     </div>
 
     <div class="review-group">
@@ -60,5 +60,35 @@
     <button type="submit" class="btn-review">Submit Review</button>
 
   </form>
+  <hr />
+  <h4 class="review-heading">Reviews</h4>
+  <% if (listing.reviews.length === 0) { %>
+    <p class="no-reviews">No reviews yet. Be the first to review!</p>
+  <% } else { %>
+    <div class="reviews-list">
+  <% for(review of listing.reviews) { %>
 
+    <div class="review-card">
+      <div class="card-title">Jane Doe</div>
+      <div class="review-rating">
+        <% for(let i = 1; i <= 5; i++) { %>
+          <span class="star"><%= i <= review.rating ? "★" : "☆" %></span>
+        <% } %>
+      </div>
+
+      <!-- Comment -->
+      <p class="review-text"><%= review.comment %></p>
+
+       <form method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
+      <button class="btn btn-sm btn-dark" >Delete</button>
+    </form>
+       
+    </div>
+      
+   
+     
+
+  <% } %>
+</div>
+  <% } %>
 </div>
