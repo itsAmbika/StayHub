@@ -17,7 +17,7 @@
       <p class="details-price">
         ₹ <%= listing.price.toLocaleString("en-IN") %> / night
       </p>
-
+      <i><p class="details-host">Owned by <%= listing.owner.username %></p></i>
       <p class="details-desc"><%= listing.description %></p>
 
       <div class="details-location">
@@ -25,6 +25,7 @@
       </div>
 
       <!-- Buttons -->
+       <% if(currentUser && listing.owner._id.equals(currentUser._id)) { %>
       <div class="details-actions">
         <a href="/listings/<%= listing._id %>/edit" class="btn-edit">Edit</a>
 
@@ -32,7 +33,8 @@
           <button class="btn-delete">Delete</button>
         </form>
       </div>
-
+        <% } %>
+      
       
     </div>
     
