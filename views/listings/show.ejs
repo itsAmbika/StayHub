@@ -25,7 +25,6 @@
       </div>
 
       <!-- Buttons -->
-       <% if(currentUser && listing.owner._id.equals(currentUser._id)) { %>
       <div class="details-actions">
         <a href="/listings/<%= listing._id %>/edit" class="btn-edit">Edit</a>
 
@@ -33,7 +32,7 @@
           <button class="btn-delete">Delete</button>
         </form>
       </div>
-        <% } %>
+      
       
       
     </div>
@@ -44,9 +43,9 @@
 </div>
 
 <div class="review-container">
-
+  <% if (currentUser) { %>
   <h4 class="review-heading">Leave a Review</h4>
-
+  
   <form class="review-form" action="/listings/<%= listing._id %>/reviews" method="POST" >
 
     <div class="review-group">
@@ -62,6 +61,7 @@
     <button type="submit" class="btn-review">Submit Review</button>
 
   </form>
+  <%}%>
   <hr />
   <h4 class="review-heading">Reviews</h4>
   <% if (listing.reviews.length === 0) { %>
@@ -71,7 +71,7 @@
   <% for(review of listing.reviews) { %>
 
     <div class="review-card">
-      <div class="card-title">Jane Doe</div>
+      <div class="card-title"><%= review.author.username %></div>
       <div class="review-rating">
         <% for(let i = 1; i <= 5; i++) { %>
           <span class="star"><%= i <= review.rating ? "★" : "☆" %></span>
