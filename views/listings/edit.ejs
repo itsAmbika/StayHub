@@ -4,7 +4,7 @@
 
   <h3 class="form-heading">Edit Listing</h3>
 
-  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
 
     <div class="form-group">
       <label>Title</label>
@@ -21,10 +21,18 @@
         Please provide a description.
       </div>
     </div>
+    <div class="current-image">
+      <p>Current Image:</p>
+      <img 
+        src="<%= originalUrl %>" 
+        alt="Current Listing Image" 
+        class="img-thumbnail"
+      >
+    </div>
 
     <div class="form-group">
       <label>Image URL</label>
-      <input name="listing[image][url]" value="<%= listing.image.url %>" type="text" class="form-control" required>
+      <input name="listing[image]" type="file" class="form-control" >
       <div class="invalid-feedback">
         Please provide an image URL.
       </div>
