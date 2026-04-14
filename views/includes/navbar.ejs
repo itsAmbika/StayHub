@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-md bg-custom navbar-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-  <i class="fa-solid fa-house-circle-check"></i> StayHub
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-solid fa-house-circle-check"></i> StayHub
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
@@ -9,19 +11,36 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" href="/">Home</a>
-        <a class="nav-link" href="/listings">All Listings</a>
-        <a class="nav-link" href="/listings/new">Add New Listing</a>
 
+      <!-- Left -->
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
       </div>
-      <div class="navbar-nav ms-auto">
+
+      <!-- Center Search -->
+      <form class="search-form mx-auto d-flex">
+  <input 
+    class="form-control search-input" 
+    type="search" 
+    placeholder="Search stays..."
+  >
+  <button class="search-btn" type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+</form>
+
+      <!-- Right -->
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings/new">Add New Stay</a>
+
         <% if(!currentUser) { %>
-          <a class="nav-link" href="/signup">Sign Up</a>
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
         <% } else { %>
-          <a class="nav-link" href="/logout">Logout</a>
+          <a class="nav-link" href="/logout"><b>Logout</b></a>
         <% } %>
+      </div>
+
     </div>
   </div>
 </nav>
