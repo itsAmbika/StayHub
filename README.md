@@ -34,29 +34,41 @@ Listings
 - Custom color palette
 - Elegant forms & cards
 
-## Screenshots
+## 📸 Screenshots
+
+### Home Page
+![Home Page](./assets/home.png)
+
+### Sign Up
+![Signup](./assets/signup.png)
+
+### Create Listing
+![Create](./assets/create.png)
+
+### Reviews
+![Reviews](./assets/rating.png)
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-💻 Frontend
+Frontend
 - HTML, CSS, JavaScript
 - Bootstrap
 - EJS
   
-⚙️ Backend
+Backend
 - Node.js
 - Express.js
   
-🗄️ Database
+Database
 - MongoDB
 - Mongoose
   
-🔐 Authentication
+Authentication
 - Passport.js
 - express-session
   
-☁️ Cloud
+Cloud
 - Cloudinary
 
 ## Project Structure (MVC)
